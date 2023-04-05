@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react"
+import "./Meme.css"
 // import memedata from "./memedata"
 
 function Meme() {
@@ -6,18 +7,17 @@ function Meme() {
   const [formData, setFormData] = useState({
     topText: "",
     bottomText: "",
-    randomImage: "https://i.imgflip.com/1e7ql7.jpg",
+    randomImage: " https://i.imgflip.com/2896ro.jpg",
   })
-
+  console.log("rendered")
   useEffect(() => {
     fetch("https://api.imgflip.com/get_memes")
       .then((res) => res.json())
       .then((data) => setImage(data.data.memes))
-  })
+  }, [])
 
   function getImage(e) {
     e.preventDefault()
-    // let data = image.data.memes
     const randomNumber = Math.floor(Math.random() * image.length)
     console.log("randomnumber", randomNumber)
     let url = image[randomNumber].url
@@ -33,7 +33,7 @@ function Meme() {
     }))
   }
   return (
-    <div>
+    <div className="meme_div">
       <main>
         <input
           type="text"
@@ -52,12 +52,12 @@ function Meme() {
         <button className="meme-button" onClick={getImage}>
           Get The Images
         </button>
-        <div>
-          <img className="img-display" src={formData.randomImage} alt="" />
-          <h1>{formData.topText}</h1>
-          <h1>{formData.bottomText}</h1>
-        </div>
       </main>
+      <div className="image-div">
+        <h1 className="image-div-text topText">{formData.topText}</h1>
+        <img className="img-display" src={formData.randomImage} alt="" />
+        <h1 className="image-div-text bottomText">{formData.bottomText}</h1>
+      </div>
     </div>
   )
 }
