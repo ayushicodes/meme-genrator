@@ -1,35 +1,74 @@
-.meme_div {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-}
-.meme_div main {
-  margin: 3%;
-  text-align: center;
-}
-.meme_div main input {
-  border: 2px solid #d3d3d3;
-  color: #d3d3d3;
-  height: 2rem;
-  margin: 5%;
-}
-.meme_div main button {
-  height: 2rem;
-  background-color: #d3d3d3;
-  color: white;
-  border: none;
+* {
+  box-sizing: border-box;
 }
 
-.meme_div .image-div {
+body {
+  font-family: "Karla", sans-serif;
+  margin: 0;
+}
+
+main {
+  padding: 36px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  height: 65px;
+  background: linear-gradient(90deg, #2e3192 1.18%, #1bffff 100%);
+  color: white;
+  padding: 20px;
+}
+
+.header--image {
+  height: 100%;
+  margin-right: 6px;
+}
+
+.header--title {
+  font-size: 1.25rem;
+  margin-right: auto;
+}
+
+.header--project {
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.form {
+  display: grid;
+  grid-template: 40px 40px / 1fr 1fr;
+  gap: 17px;
+  margin-bottom: 17px;
+}
+
+.form--input {
+  font-family: "Karla", sans-serif;
+  border-radius: 5px;
+  border: 1px solid #d5d4d8;
+  text-indent: 5px;
+}
+
+.form--button {
+  grid-column: 1 / -1;
+  font-family: "Karla", sans-serif;
+  border-radius: 5px;
+  background: linear-gradient(90deg, #2e3192 1.18%, #1bffff 100%);
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.meme {
   position: relative;
 }
 
-.meme_div .image-div .img-display {
+.meme--image {
   max-width: 100%;
   border-radius: 3px;
 }
-.meme_div .image-div .image-div-text {
+
+.meme--text {
   position: absolute;
   width: 80%;
   text-align: center;
@@ -46,9 +85,11 @@
     -2px 2px 0 #000, 0 2px 0 #000, 2px 0 0 #000, 0 -2px 0 #000, -2px 0 0 #000,
     2px 2px 5px #000;
 }
-.topText {
-  top: 0;
-}
-.bottomText {
+
+.bottom {
   bottom: 0;
+}
+
+.top {
+  top: 0;
 }
