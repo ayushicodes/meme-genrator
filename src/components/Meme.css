@@ -18,6 +18,7 @@ main {
   background: linear-gradient(90deg, #2e3192 1.18%, #1bffff 100%);
   color: white;
   padding: 20px;
+  width: 100%;
 }
 
 .header--image {
@@ -61,6 +62,7 @@ main {
 
 .meme {
   position: relative;
+  text-align: center;
 }
 
 .meme--image {
