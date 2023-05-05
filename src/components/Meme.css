@@ -14,21 +14,22 @@ main {
 .header {
   display: flex;
   align-items: center;
+  justify-content: center;
   height: 65px;
   background: linear-gradient(90deg, #2e3192 1.18%, #1bffff 100%);
   color: white;
-  padding: 20px;
+  /* padding: 20px;*/
   width: 100%;
 }
 
-.header--image {
+/* .header--image {
   height: 100%;
   margin-right: 6px;
-}
+}*/
 
 .header--title {
   font-size: 1.25rem;
-  margin-right: auto;
+  /* margin-right: auto; */
 }
 
 .form {
