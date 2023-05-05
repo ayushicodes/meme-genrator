@@ -108,6 +108,9 @@ main {
     margin: 4%;
   }
   .form {
-    margin-bottom: 8%;
+    margin-bottom: 15%;
+  }
+  .form button {
+    margin-top: 10%;
   }
 }
