@@ -104,7 +104,7 @@ main {
 @media screen and (max-width: 480px) {
   .form .form-input input {
     height: 25px;
-    width: 35%;
+    width: 45%;
     margin: 2%;
   }
 }
